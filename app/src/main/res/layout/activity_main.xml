@@ -1,0 +1,215 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:gravity="center"
+    tools:context=".MainActivity"
+    tools:ignore="ExtraText"
+    android:orientation="vertical">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_marginTop="4dp"
+        android:id="@+id/capture_target_Layout"
+        android:orientation="vertical">
+        <ImageView
+            android:id="@+id/monitor"
+            android:layout_width="match_parent"
+            android:layout_height="300dp"
+            app:layout_constraintTop_toTopOf="parent"
+            android:layout_gravity="center_vertical|center_horizontal" />
+        <TableLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginEnd="16dp"
+            android:layout_marginStart="16dp">
+            <TableRow>
+                <EditText
+                    android:id="@+id/ip"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:inputType="text"
+                    android:maxLines="1"
+                    android:gravity="center"/>
+                <Button
+                    android:id="@+id/connect"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Connect"
+                    android:layout_gravity="center_vertical|center_horizontal" />
+            </TableRow>
+        </TableLayout>
+    </LinearLayout>
+
+    <!--SMS-->
+    <EditText
+        android:id="@+id/editTextPhoneNo"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="4dp"
+        android:layout_marginEnd="16dp"
+        android:layout_marginStart="16dp"
+        android:inputType="phone"
+        android:hint="PhoneNo"/>
+    <Button
+        android:id="@+id/TestBT"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="SoS Send!"/>
+
+    <!--ACCELEROMETER-->
+    <TextView
+        android:id="@+id/tvTitle"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Accelerometer Compare"
+        android:layout_marginTop="5dp"
+        android:textSize="20dp"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <!--Gravity AcceleroMeter-->
+    <TableLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:stretchColumns="*">
+        <TextView
+            android:id="@+id/G_Total"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:textSize="15dp"
+            android:text="Gravity Speed : 0"
+            />
+        <TableRow>
+            <TextView
+                android:id="@+id/GAxis_X"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textSize="15dp"
+                android:text="X axis : 0"
+                />
+            <TextView
+                android:id="@+id/GAxis_Y"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textSize="15dp"
+                android:text="Y axis : 0"
+                />
+            <TextView
+                android:id="@+id/GAxis_Z"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textSize="15dp"
+                android:text="Z axis : 0"
+                />
+        </TableRow>
+    </TableLayout>
+
+    <!--None Gravity AcceleroMeter-->
+    <!--
+    <TableLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:stretchColumns="*">
+        <TextView
+            android:id="@+id/NG_Total"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:textSize="15dp"
+            android:text="None Gravity Speed : 0"
+            />
+        <TableRow>
+            <TextView
+                android:id="@+id/NGAxis_X"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textSize="15dp"
+                android:text="X axis : 0"
+                />
+            <TextView
+                android:id="@+id/NGAxis_Y"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textSize="15dp"
+                android:text="Y axis : 0"
+                />
+            <TextView
+                android:id="@+id/NGAxis_Z"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textSize="15dp"
+                android:text="Z axis : 0"
+                />
+        </TableRow>
+    </TableLayout>-->
+
+    <!--Linear AcceleroMeter-->
+    <TableLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:stretchColumns="*"
+        android:layout_weight="1">
+        <TextView
+            android:id="@+id/L_Total"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:textSize="15dp"
+            android:text="Linear Speed : 0"
+            />
+        <TableRow>
+            <TextView
+                android:id="@+id/LAxis_X"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:textSize="15dp"
+                android:text="X axis : 0" />
+            <TextView
+                android:id="@+id/LAxis_Y"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:textSize="15dp"
+                android:text="Y axis : 0" />
+            <TextView
+                android:id="@+id/LAxis_Z"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:textSize="15dp"
+                android:text="Z axis : 0" />
+        </TableRow>
+    </TableLayout>
+
+    <!--GPS-->
+    <TableLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:stretchColumns="*"
+        android:paddingTop="5dp">
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="5dp"
+            android:gravity="center"
+            android:text="GPS"
+            android:textSize="20dp">
+        </TextView>
+        <TableRow>
+            <TextView
+                android:id="@+id/View_GPS_Provider"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Provider(제공) : \naltitude(고도) :"/>
+            <TextView
+                android:id="@+id/View_GPS_Coordinate"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Latitude(위도) : \nLongtitude(경도) : "/>
+        </TableRow>
+
+    </TableLayout>
+
+</LinearLayout>
